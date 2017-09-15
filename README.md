@@ -34,7 +34,7 @@ cd ~/.bash
 git clone git://github.com/jimeh/git-aware-prompt.git
 ```
 
-Edit your `~/.bash_profile` or `~/.profile` and add the following to the top:
+Edit your `~/.bash_profile` or `~/.profile` or `~/.bashrc` (for Ubuntu) and add the following to the top:
 
 ```bash
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
@@ -90,6 +90,11 @@ Colorized:
 export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 ```
 
+#### Windows
+
+```bash
+export PS1="\[\033]0;$MSYSTEM:\w\007\033[32m\]\u@\h:\[\033[33m\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\033[0m\]\$ "
+```
 
 ## Updating
 
